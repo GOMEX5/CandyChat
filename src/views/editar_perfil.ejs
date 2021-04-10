@@ -1,0 +1,46 @@
+<%- include('partials/_head') %>
+
+<% if(login) {%>
+<%- include('partials/_nav') %>
+        <div class="card animate__animated animate__flipInY">
+            <div class="card-header text-center">
+                <h1>Editando</h1>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <% if(dato == 'name'){ %> 
+                        <form action="/updateName/<%= id %>" method="POST">
+                            <label for="my-input">Nombre</label>
+                            <input id="my-input" class="form-control" type="text" name="name" value="<%= name %> ">
+                            <div class="d-grid gap-2 mx-4 mt-3">
+                                <input type="submit" class="btn btn-outline-success" value="Guardar">
+                            </div>
+                        </form>
+                    <% }else if(dato == 'email'){ %> 
+                        <form action="/updateEmail/<%= id %>" method="POST">
+                            <label for="my-input">Email</label>
+                            <input id="my-input" class="form-control" type="text" name="email" value="<%= email %> ">
+                            <div class="d-grid gap-2 mx-4 mt-3">
+                                <input type="submit" class="btn btn-outline-success" value="Guardar">
+                            </div>
+                        </form>
+                    <% }else if(dato == 'phone'){ %> 
+                        <form action="/updatePhone/<%= id %>" method="POST">
+                            <label for="my-input">Phone</label>
+                            <input id="my-input" class="form-control" type="text" name="phone" value="<%= phone %> ">
+                            <div class="d-grid gap-2 mx-4 mt-3">
+                                <input type="submit" class="btn btn-outline-success" value="Guardar">
+                            </div>
+                        </form>
+                    <% } %> 
+                </div>
+            </div>
+        </div>
+<% } else{ %>
+<center class="mt-5">
+    <h1><strong><%= name %> </strong></h1>
+    <a href="login" class="btn btn-primary">Ir al Login</a>
+</center>
+<% } %>
+
+<%- include('partials/_footer') %>

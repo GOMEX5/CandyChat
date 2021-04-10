@@ -1,0 +1,25 @@
+<%- include('partials/_head') %>
+
+<% if(login) {%>
+<%- include('partials/_nav') %>
+    <div class="card animate__animated animate__flipInY">
+        <div class="card-header text-center">
+            <h1>Perfil</h1>
+        </div>
+        <div class="card-body">
+            <p><%= name %><a href="/editar_perfil/name" class=""><i class="fas fa-pen"></i></a><br><br>
+                <%= email %><a href="/editar_perfil/email"><i class="fas fa-pen"></i></a><br><br>
+                <%= phone %><a href="/editar_perfil/phone"><i class="fas fa-pen"></i></a></p>
+        </div>
+    </div>
+    <center class="mt-5">
+        <a href="/logout" class="btn btn-primary">Cerrar secion</a>
+    </center>
+<% } else{ %>
+<center class="mt-5">
+    <h1><strong><%= name %> </strong></h1>
+    <a href="login" class="btn btn-primary">Ir al Login</a>
+</center>
+<% } %>
+
+<%- include('partials/_footer') %>

@@ -1,0 +1,39 @@
+<%- include('partials/_head') %>
+
+<div class="login animate__animated animate__flipInY">
+    <div class="card">
+        <div class="head_login">
+            <h1 class="text-center">Registro</h1>
+        </div>
+        <div class="body_login">
+            <form action="/registrar" method="POST">
+                <div class="d-grid col-10 mx-auto"></div>
+                <div class="form-floating mb-2">
+                    <input type="text" class="form-control" name="user" placeholder="Full Name" required>
+                    <label for="user">UserName:</label>
+                </div>
+                <div class="form-floating mb-2">
+                    <input type="email" class="form-control" name="email" placeholder="example@gmail.com" required>
+                    <label for="email">Email:</label>
+                </div>
+                <div class="form-floating mb-2">
+                    <input type="text" class="form-control" name="phone" placeholder="+50525252525" required>
+                    <label for="phone">Phone:</label>
+                </div>
+                <div class="form-floating mb-2">
+                    <input type="password" class="form-control" name="pass" placeholder="Password" required>
+                    <label for="pass">Password:</label>
+                </div>
+        </div>
+        <div class="d-grid gap-2 mx-4 mt-3">
+            <input type="submit" class="btn btn-success" value="Registrar">
+        </div>
+        </form>
+        <div class="d-grid gap-2 col-6 mx-auto mt-2">
+            <a href="/login" class="link-success mx-5">Login</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<%- include('partials/_footer') %>

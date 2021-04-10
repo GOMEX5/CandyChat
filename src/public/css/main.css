@@ -1,0 +1,47 @@
+/*colores del socialred 
+#26a69a
+#ec407a*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Spicy Rice', cursive;
+}
+@font-face {
+    font-family: "Spicy Rice";
+    src: url("/recursos/fonts/Spicy_Rice/SpicyRice-Regular.ttf");
+}
+body{
+    font-family: 'Indie Flower', cursive;
+    background-color:  #f2f2f2
+}
+/*Login*/
+.card{
+    background-color: #ffffff;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #cccccc;
+    box-shadow: 10px 10px 8px #888888;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+.img_logo{
+    width: 200px;
+    margin-left: 50px;
+}
+
+.login_head{
+    width: 100%;
+    bordee-radius: 10px;
+}
+
+.boton{
+    background-color: #26a69a;
+}
+
+.foto_perfil{
+    width: 32px;
+    display: inline;
+}

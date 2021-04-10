@@ -1,0 +1,12 @@
+<%- include('partials/_head') %>
+
+<% if(login) {%>
+<%- include('partials/_nav') %>
+<% } else{ %>
+<center class="mt-5">
+    <h1><strong><%= name %> </strong></h1>
+    <a href="login" class="btn btn-primary">Ir al Login</a>
+</center>
+<% } %>
+
+<%- include('partials/_footer') %>

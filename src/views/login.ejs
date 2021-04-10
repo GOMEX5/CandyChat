@@ -1,0 +1,27 @@
+<%- include('partials/_head') %>
+
+<div class="login animate__animated animate__flipInY">
+    <div class="card">
+        <div class="head_login">
+            <img src="img/logo.png" class="img_logo" alt="Logo_CandyChat">
+        </div>
+        <div class="body_login">
+            <form action="/logiar" method="POST">
+                <div class="d-grid col-10 mx-auto mt-2">
+                        <input type="text" class="form-control" name="user" placeholder="UserName" required>
+                        <input type="password" class="form-control mt-3" name="pass" placeholder="Password" required>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 mx-4 mt-3">
+                    <input type="submit" class="btn btn-outline-success" value="Login">
+                </div>
+                <div class="d-grid gap-2 d-md-block mt-3">
+                    <a href="/registro" class="link-success ms-4">Registrate</a>
+                    <a href="#" class="link-success ms-3">Olvide mi password</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/_footer') %>
